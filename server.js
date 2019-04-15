@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 app.get("/api/whoami", (req, res) => {
 	res.json({
 		ipaddress: req.headers["x-forwarded-for"].split(",")[0],
-		language: req.headers[".accept-language"],
+		language: req.headers["accept-language"],
 		software: req.headers["user-agent"],
 	});
 });
